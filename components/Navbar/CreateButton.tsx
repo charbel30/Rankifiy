@@ -11,8 +11,6 @@
 </span>
 </Button>*/
 
-
-
 import React, { useState } from 'react';
 import styles from './CreateButton.module.css';
 import { Button } from '@mantine/core';
@@ -31,13 +29,10 @@ export default function CustomButton() {
     <Button
       className={styles.CreateButton}
       pr={40}
-      
-      variant='default'
+      variant="default"
       onMouseEnter={handleMouseEnter}
     >
-      <span className={styles.Text}>
-        Create
-      </span>
+      <span className={styles.Text}>Create</span>
       <span className={styles.IconContainer}>
         <Icon
           width={20}

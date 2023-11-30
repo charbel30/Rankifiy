@@ -21,10 +21,10 @@ export default function RootLayout({ children }: { children: any }) {
       </head>
       <body>
         <MantineProvider theme={theme}>
-
           <HeaderMegaMenu />
-          
-          {children}</MantineProvider>
+
+          {children}
+        </MantineProvider>
       </body>
     </html>
   );
