@@ -1,0 +1,105 @@
+.header {
+    height: rem(70px);
+    padding-left: var(--mantine-spacing-md);
+    padding-right: var(--mantine-spacing-md);
+    scale: 1;
+    position: relative;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    left: 3%;  /* Adjust these values */
+    right: 3%; /* Adjust these values */
+    bottom: 0;
+    border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+}
+  .link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: var(--mantine-spacing-md);
+    padding-right: var(--mantine-spacing-md);
+    text-decoration: none;
+    color: light-dark(var(--mantine-color-dark-7), var(--mantine-color-white));
+    font-weight: 600;
+    font-size: var(--mantine-font-size-sm);
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    border-radius:  var(--mantine-radius-md);
+    transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease ,transform 0.1s ease;
+  
+    @media (max-width: $mantine-breakpoint-md) {
+      height: rem(60px);
+      width: 100%;
+    }
+  
+    @mixin hover {
+      background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+      color: light-dark(var(--mantine-color-brightblue-6), var(--mantine-color-brightblue-5));
+      padding-left: calc(var(--mantine-spacing-md) + 6px);
+      padding-right: calc(var(--mantine-spacing-md) + 6px);
+      transform: scale(1.02);
+    }
+    
+  }
+  .link:hover {
+   
+}
+
+.link:active {
+    background-color: light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
+    padding-left: calc(var(--mantine-spacing-md) + -3px);
+    padding-right: calc(var(--mantine-spacing-md) + -3px);
+    transform: scale(0.98);
+}
+  
+  
+  
+  @media(min-width: $mantine-breakpoint-md) {
+    .header{
+      padding-left: 6vw;
+      padding-right: 3vw;
+     font-size: var(--mantine-font-size);  
+    
+    }
+  }
+  .subLink {
+    width: 100%;
+    padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+    border-radius: var(--mantine-radius-md);
+  
+    @mixin hover {
+      background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-7));
+    }
+  }
+  
+  .dropdownFooter {
+    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-7));
+    margin: calc(var(--mantine-spacing-md) * -1);
+    margin-top: var(--mantine-spacing-sm);
+    padding: var(--mantine-spacing-md) calc(var(--mantine-spacing-md) * 2);
+    padding-bottom: var(--mantine-spacing-xl);
+    border-top: rem(1px) solid light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
+  }
+
+
+  .centerButton {
+    width: 15vw;
+    transition: all 0.22s ease;
+    cursor: pointer;
+    font-size: var(--mantine-font-size-sm) !important;
+    transform: scale(1);
+}
+
+.centerButton:hover {
+    background-color: light-dark(var(--mantine-color-dark-7), var(--mantine-color-white)); 
+    color: light-dark( var(--mantine-color-white),var(--mantine-color-dark-7));
+    transform: scale(1.07);
+}
+
+.centerButton:active {
+    background-color: light-dark(var(--mantine-color-dark-7), var(--mantine-color-white)); 
+    color: light-dark( var(--mantine-color-white),var(--mantine-color-dark-7));
+    transform: scale(0.95);
+}

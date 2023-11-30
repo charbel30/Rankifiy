@@ -2,7 +2,7 @@ import '@mantine/core/styles.css';
 import React from 'react';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from '../theme';
-
+import { HeaderMegaMenu } from '@/components/Navbar/HeaderMegaMenu';
 export const metadata = {
   title: 'Mantine Next.js template',
   description: 'I am using Mantine with Next.js!',
@@ -20,7 +20,11 @@ export default function RootLayout({ children }: { children: any }) {
         />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <MantineProvider theme={theme}>
+
+          <HeaderMegaMenu />
+          
+          {children}</MantineProvider>
       </body>
     </html>
   );
