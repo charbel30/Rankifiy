@@ -1,5 +1,6 @@
 import { Title, Text, Anchor } from '@mantine/core';
 import classes from './Welcome.module.css';
+import Image from 'next/image'
 
 export function Welcome() {
   return (
@@ -7,17 +8,36 @@ export function Welcome() {
       <Title className={classes.title} ta="center" mt={100}>
         Welcome to{' '}
         <Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
-          Mantine
+         my noods 
         </Text>
       </Title>
-      <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
-        This starter Next.js project includes a minimal setup for server side rendering, if you want
-        to learn more on Mantine + Next.js integration follow{' '}
-        <Anchor href="https://mantine.dev/guides/next/" size="lg">
-          this guide
-        </Anchor>
-        . To get started edit page.tsx file.
-      </Text>
+      <div className={classes.image}>
+        <Image
+          src="/images/image1.jpeg"
+          alt="Noodles image 1"
+         width={512}
+          height={512}
+          objectFit="cover"
+        />
+      </div>
+      <div className={classes.image}>
+        <Image
+          src="/images/image2.jpeg"
+          alt="Noodles image 2"
+          width={512}
+          height={512}
+          objectFit="cover"
+        />
+      </div>
+      <div className={classes.image}>
+        <Image
+          src="/images/image3.jpeg"
+          alt="Noodles image 3"
+          width={512}
+          height={512}
+          objectFit="cover"
+        />
+      </div>
     </>
   );
 }

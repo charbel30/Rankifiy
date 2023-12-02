@@ -1,0 +1,27 @@
+.icon {
+    width: 22px;
+    height: 22px;
+    transition: opacity 0.3s ease; /* Add transition for smooth animation */
+  }
+  
+  .dark, .light {
+    position: absolute;
+    transition: opacity 0.3s ease;
+  }
+  
+  .dark {
+    opacity: 0;
+  }
+  
+  .light {
+    opacity: 1;
+  }
+  
+  .dark-mode .light {
+    opacity: 0;
+  }
+  
+  .dark-mode .dark {
+    opacity: 1;
+  }
+  
