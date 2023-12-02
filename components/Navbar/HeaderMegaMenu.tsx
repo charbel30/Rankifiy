@@ -3,7 +3,6 @@
 import {
   Group,
   Button,
-
   Divider,
   Box,
   Burger,
@@ -16,7 +15,7 @@ import { useDisclosure } from '@mantine/hooks';
 import Websitelogo from './Websitelogo';
 import classes from './HeaderMegaMenu.module.css';
 import Link from 'next/link';
-import CreateButton from './CreateButton';
+import {CreateButton, SignUpButton} from './CustomButtons';
 import { ActionToggle } from '../ColorSchemeToggle/ActionToggle';
 
 
@@ -32,7 +31,7 @@ export function HeaderMegaMenu() {
             <Link href="/" passHref>
               <Websitelogo />
             </Link>
-            <Link href="/" passHref className={classes.link}>
+            <Link href="/" passHref >
 
             <CreateButton />
             </Link>
@@ -58,9 +57,10 @@ export function HeaderMegaMenu() {
 
           </Group>
 
-          <Group visibleFrom="sm">
-            <Button variant="default">Log in</Button>
-            <Button>Sign up</Button>
+          <Group visibleFrom="sm" gap={25}>
+            
+            <Button variant="default" className={classes.loginbutton}>Log in</Button>
+           <SignUpButton />
             <ActionToggle />
             
           </Group>

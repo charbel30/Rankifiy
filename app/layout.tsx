@@ -4,8 +4,8 @@ import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from '../theme';
 import { HeaderMegaMenu } from '@/components/Navbar/HeaderMegaMenu';
 export const metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
+  title: 'Rankifiy',
+  description: 'Tierlists for everything',
 };
 
 export default function RootLayout({ children }: { children: any }) {

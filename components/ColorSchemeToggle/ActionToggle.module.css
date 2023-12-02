@@ -1,27 +1,54 @@
 .icon {
-    width: 22px;
-    height: 22px;
-    transition: opacity 0.3s ease; /* Add transition for smooth animation */
-  }
-  
-  .dark, .light {
-    position: absolute;
-    transition: opacity 0.3s ease;
+    width: rem(22px);
+    height: rem(22px);
+    transition: transform 0.3s ease-in-out;
   }
   
   .dark {
-    opacity: 0;
+    @mixin dark {
+      display: none;
+    }
+  
+    @mixin light {
+      display: block;
+    }
   }
   
   .light {
-    opacity: 1;
+    @mixin light {
+      display: none;
+    }
+  
+    @mixin dark {
+      display: block;
+      animation: rotate 16s linear infinite;
+    }
   }
   
-  .dark-mode .light {
-    opacity: 0;
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
   
-  .dark-mode .dark {
-    opacity: 1;
+  .themeToggle {
+    cursor: pointer;
+    box-shadow: 0 0 50px 20px rgba(0, 0, 0, .1);
+    line-height: 1;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .themeToggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 50px 20px rgba(0, 0, 0, .2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .themeToggle:active {
+    transform: scale(0.95);
+    transition: transform 0.2s ease-in-out;
   }
   
