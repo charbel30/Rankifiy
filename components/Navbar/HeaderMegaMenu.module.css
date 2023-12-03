@@ -158,4 +158,20 @@
     transform: scale(1.1);
     transition: all 0.22s ease;
   }
+
+}
+
+.loginbutton:active {
+  background-color: light-dark(var(--mantine-color-dark-7), var(--mantine-color-white)); 
+  color: light-dark( var(--mantine-color-white),var(--mantine-color-dark-7));
+  transform: scale(0.95);
+}
+
+.mobilebutton{
+ width: 40vw !important;
+  transition: all 0.22s ease;
+  cursor: pointer;
+  font-size: var(--mantine-font-size-sm) !important;
+  transform: scale(1);
+
 }

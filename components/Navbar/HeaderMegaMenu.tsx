@@ -1,23 +1,13 @@
 'use client';
 
-import {
-  Group,
-  Button,
-  Divider,
-  Box,
-  Burger,
-  Drawer,
-  ScrollArea,
-  rem,
-} from '@mantine/core';
+import { Group, Button, Divider, Box, Burger, Drawer, ScrollArea, rem } from '@mantine/core';
 
 import { useDisclosure } from '@mantine/hooks';
 import Websitelogo from './Websitelogo';
 import classes from './HeaderMegaMenu.module.css';
 import Link from 'next/link';
-import {CreateButton, SignUpButton} from './CustomButtons';
+import { CreateButton, SignUpButton } from './CustomButtons';
 import { ActionToggle } from '../ColorSchemeToggle/ActionToggle';
-
 
 export function HeaderMegaMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
@@ -31,9 +21,8 @@ export function HeaderMegaMenu() {
             <Link href="/" passHref>
               <Websitelogo />
             </Link>
-            <Link href="/" passHref >
-
-            <CreateButton />
+            <Link href="/" passHref>
+              <CreateButton />
             </Link>
           </Group>
 
@@ -51,28 +40,28 @@ export function HeaderMegaMenu() {
             <Link href="#" className={classes.link}>
               About
             </Link>
-              <Link href="#" className={classes.link}>
+            <Link href="#" className={classes.link}>
               Support
             </Link>
-
           </Group>
 
           <Group visibleFrom="sm" gap={25}>
-            
-            <Button variant="default" className={classes.loginbutton}>Log in</Button>
-           <SignUpButton />
+            <Button variant="default" className={classes.loginbutton}>
+              Log in
+            </Button>
+            <Link href="/register" passHref>
+              <SignUpButton />
+            </Link>
             <ActionToggle />
-            
           </Group>
         </Group>
         <Group justify="space-between" h="100%" pl={20} pt="sm" pb="sm" pr={20} hiddenFrom="md">
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="md" />
-        
-          <Group hiddenFrom="md" justify='space-between' gap={50}   pr={5} >
-                  <Link href="/" passHref >
 
-        <CreateButton />
-        </Link>
+          <Group hiddenFrom="md" justify="space-between" gap={50} pr={5}>
+            <Link href="/" passHref>
+              <CreateButton />
+            </Link>
             <Link href="/" passHref>
               <Websitelogo />
             </Link>
@@ -89,8 +78,10 @@ export function HeaderMegaMenu() {
         hiddenFrom="md"
         zIndex={1000000}
       >
+        <ActionToggle />
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="md" />
+
           <Link href="/" passHref className={classes.link}>
             Create
           </Link>
@@ -108,9 +99,18 @@ export function HeaderMegaMenu() {
           </Link>
           <Divider my="md" />
 
+          <Group justify="center" pb="xl" >
+            <Link href="/">
+              <Button variant="default" className={classes.mobilebutton}>
+                Log in
+              </Button>
+            </Link>
+            <Link href="/register">
+              <Button className={classes.mobilebutton}>Sign up</Button>
+            </Link>
+          </Group>
           <Group justify="center" grow pb="xl" px="md">
-            <Button variant="default">Log in</Button>
-            <Button>Sign up</Button>
+            
           </Group>
         </ScrollArea>
       </Drawer>

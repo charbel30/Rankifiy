@@ -10,8 +10,7 @@ export function Welcome() {
           Rankifiy
         </Text>
       </Title>
-      <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
-      </Text>
+      <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl"></Text>
     </>
   );
 }

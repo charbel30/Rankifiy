@@ -1,12 +1,10 @@
-
 import Link from 'next/link';
 import React, { useState } from 'react';
 import styles from './CustomButton.module.css';
 import { Button } from '@mantine/core';
 import { Icon } from '@iconify-icon/react';
 
-
-export  function CreateButton() {
+export function CreateButton() {
   const [translateValue, setTranslateValue] = useState({ x: 0, y: 0 });
 
   const handleMouseEnter = () => {
@@ -37,16 +35,13 @@ export  function CreateButton() {
 
 export function SignUpButton() {
   return (
-    <Link href="/SignUp" passHref>
-      <Button className={styles.signUpButton}>
-        Register
-      
-          <Icon
-            icon="material-symbols:arrow-forward-rounded"
-            width={18}
-            className={styles.signUpButtonicon}
-          />
-      </Button>
-    </Link>
+    <Button className={styles.signUpButton}>
+      Register
+      <Icon
+        icon="material-symbols:arrow-forward-rounded"
+        width={18}
+        className={styles.signUpButtonicon}
+      />
+    </Button>
   );
 }
