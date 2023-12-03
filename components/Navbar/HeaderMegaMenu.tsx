@@ -16,8 +16,8 @@ export function HeaderMegaMenu() {
   return (
     <Box pb={70} pt={15}>
       <header className={`${classes.header}`}>
-        <Group justify="space-between" h="100%" pl={20} pt="sm" pb="sm" pr={20} visibleFrom="md">
-          <Group h="100%" gap={100} justify="center" visibleFrom="sm">
+        <Group justify="space-between" h="100%" pl={20} pt="sm" pb="sm" pr={20} visibleFrom="md" >
+          <Group h="100%" gap={75} justify="center" visibleFrom="md">
             <Link href="/" passHref>
               <Websitelogo />
             </Link>
@@ -45,7 +45,7 @@ export function HeaderMegaMenu() {
             </Link>
           </Group>
 
-          <Group visibleFrom="sm" gap={25}>
+          <Group visibleFrom="md" gap={25} >
             <Button variant="default" className={classes.loginbutton}>
               Log in
             </Button>
@@ -78,7 +78,6 @@ export function HeaderMegaMenu() {
         hiddenFrom="md"
         zIndex={1000000}
       >
-        <ActionToggle />
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="md" />
 
