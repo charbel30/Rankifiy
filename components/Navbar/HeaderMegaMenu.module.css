@@ -136,17 +136,13 @@
 
 
 .loginbutton {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding-left: var(--mantine-spacing-md);
-  padding-right: var(--mantine-spacing-md);
+ 
+  
   text-decoration: none;
   color: light-dark(var(--mantine-color-dark-7), var(--mantine-color-white));
   font-weight: 600;
   font-size: var(--mantine-font-size-sm);
   font-family: Arial, sans-serif;
-  background-color: transparent;
   border-radius:  var(--mantine-radius-md);
   transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease ,transform 0.1s ease;
 
