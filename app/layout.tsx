@@ -3,6 +3,7 @@ import React from 'react';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from '../theme';
 import { HeaderMegaMenu } from '@/components/Navbar/HeaderMegaMenu';
+import '../components/global.css';
 export const metadata = {
   title: 'Rankifiy',
   description: 'Tierlists for everything',
