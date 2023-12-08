@@ -3,7 +3,7 @@
 import { Group, Button, Divider, Box, Burger, Drawer, ScrollArea, rem } from '@mantine/core';
 
 import { useDisclosure } from '@mantine/hooks';
-import Websitelogo from './Websitelogo';
+import Websitelogo from '@/public/Websitelogo';
 import classes from './HeaderMegaMenu.module.css';
 import Link from 'next/link';
 import { CreateButton, SignUpButton } from './CustomButtons';

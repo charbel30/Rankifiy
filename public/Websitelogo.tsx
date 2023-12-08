@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Logo from '../../public/icons/Websitelogo/google-icon-logo-svgrepo-com.svg';
+import Logo from '@/public/icons/Websitelogo/google-icon-logo-svgrepo-com.svg';
 
 export default function WebsiteLogo() {
   return (

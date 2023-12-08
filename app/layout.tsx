@@ -3,6 +3,7 @@ import React from 'react';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from '../theme';
 import { HeaderMegaMenu } from '@/components/Navbar/HeaderMegaMenu';
+import { Footer } from '@/components/Footer/Footer';
 import '../components/global.css';
 export const metadata = {
   title: 'Rankifiy',
@@ -23,8 +24,10 @@ export default function RootLayout({ children }: { children: any }) {
       <body>
         <MantineProvider theme={theme}>
           <HeaderMegaMenu />
+          
 
           {children}
+          <Footer/>
         </MantineProvider>
       </body>
     </html>
