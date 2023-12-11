@@ -1,10 +1,9 @@
-import { Welcome } from '../components/Welcome/Welcome';
-import { Footer } from '@/components/Footer/Footer';
+import { HeroHeader } from '@/components/HeroHeader/HeroHeader';
 
 export default function HomePage() {
   return (
     <>
-      <Welcome />
+      <HeroHeader />
      
     </>
   );
