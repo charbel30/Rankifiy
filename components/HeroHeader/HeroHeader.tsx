@@ -2,6 +2,7 @@ import { Title, Text, Button, Container } from '@mantine/core';
 import { Dots } from './Dots';
 import classes from './HeroHeader.module.css';
 
+
 export function HeroHeader() {
     return (
         <Container className={classes.wrapper} size={1400}>

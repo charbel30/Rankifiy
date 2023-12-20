@@ -5,6 +5,7 @@ import { theme } from '../theme';
 import { HeaderMegaMenu } from '@/components/Navbar/HeaderMegaMenu';
 import { Footer } from '@/components/Footer/Footer';
 import '../components/global.css';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 export const metadata = {
   title: 'Rankifiy',
   description: 'Tierlists for everything',
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: { children: any }) {
           {children}
           <Footer/>
         </MantineProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
